@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AcronymModuleViewController" customModule="AcronymApp" customModuleProvider="target">
+            <connections>
+                <outlet property="acronymSwitch" destination="HoD-CT-E7U" id="qWY-iy-flY"/>
+                <outlet property="searchBar" destination="JnC-w8-oOG" id="lND-H6-KKE"/>
+                <outlet property="tableView" destination="TvC-ns-kkf" id="eoH-Tv-pGp"/>
+                <outlet property="typeTitle" destination="4Gh-Qt-IP4" id="Ki4-z8-BQz"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" restorationIdentifier="Search" placeholder="Search an acronym or initialism" translatesAutoresizingMaskIntoConstraints="NO" id="JnC-w8-oOG" userLabel="searchBar">
+                    <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="alM-H1-FT2">
+                    <rect key="frame" x="10" y="105" width="394" height="31"/>
+                    <subviews>
+                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HoD-CT-E7U" userLabel="switch">
+                            <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                        </switch>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acronym" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Gh-Qt-IP4" userLabel="Acronym">
+                            <rect key="frame" x="54" y="0.0" width="340" height="31"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TvC-ns-kkf" userLabel="tableView">
+                    <rect key="frame" x="0.0" y="146" width="414" height="750"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="JnC-w8-oOG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="16A-n1-kf5"/>
+                <constraint firstItem="JnC-w8-oOG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="5Wb-B9-kbX"/>
+                <constraint firstItem="TvC-ns-kkf" firstAttribute="top" secondItem="alM-H1-FT2" secondAttribute="bottom" constant="10" id="MBC-nw-6rW"/>
+                <constraint firstItem="alM-H1-FT2" firstAttribute="top" secondItem="JnC-w8-oOG" secondAttribute="bottom" constant="10" id="bW2-SS-M43"/>
+                <constraint firstAttribute="bottom" secondItem="TvC-ns-kkf" secondAttribute="bottom" id="dDw-IU-Ixn"/>
+                <constraint firstItem="TvC-ns-kkf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="eKD-XP-Fjr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JnC-w8-oOG" secondAttribute="trailing" id="fAe-ZX-245"/>
+                <constraint firstItem="alM-H1-FT2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="mRB-vt-WLH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TvC-ns-kkf" secondAttribute="trailing" id="vam-7I-10c"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="alM-H1-FT2" secondAttribute="trailing" constant="10" id="yzf-Tc-lA5"/>
+            </constraints>
+            <point key="canvasLocation" x="-49" y="104"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
